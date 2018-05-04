@@ -1207,4 +1207,27 @@ if(FALSE)
                         data.frame(id=DailyHLC$site_year, name=site.metadata$Location, year=site.metadata$Date, lat="4.6353 to 4.9654", long="116.9542 to 117.8004", address="SAFE project, Borneo", area="attracted to humans"),
                         species.meta))
   }
+  
+  
+  
 
+  if(FALSE)
+    .trisos.2014 <- function(...){
+      data <- read.csv(suppdata("10.5061/dryad.k9m20", "Wayqecha Peru Bird Community Census Data.csv"), sep= ",")
+      comm.mat <- as.matrix(data[-1:-3])
+      rownames(comm.mat) <- data$Site
+      #Could be some more data on dryad
+      
+      site.metadata <- data[,1:13]
+      species.meta <- data.frame(species=colnames(comm.mat), taxonomy="Aves")
+      return(.matrix.melt(comm.mat,
+                          data.frame(study
+                                     data.frame(site.metadata
+                                                species.meta))
+                          
+    }
+  
+  
+  
+  
+  
